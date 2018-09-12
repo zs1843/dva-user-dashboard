@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'dva';
-import { Table, Pagination, Popconfirm } from 'antd';
-import styles from './Users.css';
+import { Table, Pagination, Popconfirm, Button } from 'antd';
+import styles from './Users.less';
 import { PAGE_SIZE } from '../../constants';
 import Layout from './../../components/Layout/Layout';
 
@@ -32,9 +32,9 @@ function Users({ list: dataSource, total, page: current, location }) {
       key: 'operation',
       render: (text, { id }) => (
         <span className={styles.operation}>
-          <a href="">Edit</a>
+          <a href=""><Button>Edit</Button></a>
           <Popconfirm title="Confirm to delete?" onConfirm={deleteHandler.bind(null, id)}>
-            <a href="">Delete</a>
+            <a href=""><Button>Delete</Button></a>
           </Popconfirm>
         </span>
       ),
