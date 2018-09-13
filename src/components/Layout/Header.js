@@ -15,6 +15,9 @@ const Header = ({ location }) => {
             <Menu.Item key="/">
                 <Link to="/"><Icon type="home" />Home</Link>
             </Menu.Item>
+            <Menu.Item key="/chart">
+                <Link to="/chart"><Icon type="line-chart" />Chart</Link>
+            </Menu.Item>
             <Menu.Item key="/404">
                 <Link to="/404"><Icon type="close-square" />404</Link>
             </Menu.Item>
